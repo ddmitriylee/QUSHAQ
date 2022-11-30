@@ -32,54 +32,50 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Material(
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.start,
         // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+        children: [
 
           Positioned(
-          bottom: 50,
-          right: 10,
+              bottom: 50,
+              right: 10,
 
-          child: Image.asset('assets/images/logo.png',)
-      ),
-      // Container(height: 150.0, color: Colors.yellow),
+              child: Image.asset('assets/images/logo.png',)
+          ),
+          // Container(height: 150.0, color: Colors.yellow),
+          Container(
+            width: 500,
+            padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Color.fromRGBO(178, 187, 238, 1),
+            ),
+            child: InkWell(
+              child: Align(
+                  alignment: Alignment.center,
 
-
-      InkWell(
-          child:  Container(
-              width: 500,
-              padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
-          color: Color.fromRGBO(178, 187, 238, 1),
-          child: Align(
-            alignment: Alignment.center,
-
-            child:Text('Создать аккаунт',
-              style: GoogleFonts.montserrat(
-                  textStyle: TextStyle(color: Colors.white, fontSize: 22),
+                  child:Text('Создать аккаунт',
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(color: Colors.white, fontSize: 22),
+                    ),
+                  )
               ),
-          )
-      ),
-      onTap: () {
-        print("Click event on Container");
-      },
-    ),
+              onTap: () {
+                print('tapped');
+              },
+            ),
 
 
+          ),
+        ],
       ),
-    ],
-      ),
-    ); // This trailing comma makes auto-formatting nicer for build methods.
+    ); // This trailing comma mak +es auto-formatting nicer for build methods.
   }
 }
+
+
+
