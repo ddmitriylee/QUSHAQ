@@ -42,24 +42,44 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+    return Material(
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/images/logo.png'),
-            TextButton(
-              child: Text('Создать аккаунт', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22)),
-              onPressed: () {
-                print('Ты создал аккаунт');
-              }
-            )
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+
+          Positioned(
+          bottom: 50,
+          right: 10,
+
+          child: Image.asset('assets/images/logo.png',)
+      ),
+      // Container(height: 150.0, color: Colors.yellow),
+
+
+      InkWell(
+          child:  Container(
+              width: 500,
+              padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
+          color: Color.fromRGBO(178, 187, 238, 1),
+          child: Align(
+            alignment: Alignment.center,
+
+            child:Text('Создать аккаунт',
+              style: GoogleFonts.montserrat(
+                  textStyle: TextStyle(color: Colors.white, fontSize: 22),
+              ),
+          )
+      ),
+      onTap: () {
+        print("Click event on Container");
+      },
+    ),
+
+
+      ),
+    ],
+      ),
+    ); // This trailing comma makes auto-formatting nicer for build methods.
   }
 }
