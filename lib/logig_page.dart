@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         scaffoldBackgroundColor: Colors.indigo,
+        textTheme: GoogleFonts.montserratTextTheme(
+          Theme.of(context).textTheme,
+        )
       ),
       home: const MyHomePage(title: 'QUSHAQ'),
     );
@@ -35,44 +38,148 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-
-          Positioned(
-              bottom: 50,
-              right: 10,
-
-              child: Image.asset('assets/images/logo.png',)
-          ),
-          // Container(height: 150.0, color: Colors.yellow),
-          Container(
-            width: 500,
-            padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              color: Color.fromRGBO(178, 187, 238, 1),
-            ),
-            child: InkWell(
-              child: Align(
-                  alignment: Alignment.center,
-
-                  child:Text('Создать аккаунт',
-                    style: GoogleFonts.montserrat(
-                      textStyle: TextStyle(color: Colors.white, fontSize: 22),
+        child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                    child: Image.asset('assets/images/logo.png'),
+                    margin: EdgeInsets.only(bottom: 40.0)
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 20),
+                  width: 350,
+                  padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(width: 2.0, color: Color.fromRGBO(143, 153, 214, 1)),
+                    color: Color.fromRGBO(178, 187, 238, 1),
+                  ),
+                  child: InkWell(
+                    child: Align(
+                        alignment: Alignment.center,
+                        child:Text('Создать аккаунт',
+                          style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),
+                        )
                     ),
-                  )
-              ),
-              onTap: () {
-                print('tapped');
-              },
-            ),
+                    onTap: () {
+                      print('tapped');
+                    },
+                  ),
+                ),
+                Container(
+                  padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
+                  width: 350,
+                  margin: EdgeInsets.only(bottom: 5),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(width: 2.0, color: Color.fromRGBO(143, 153, 214, 1)),
+                    color: Color.fromRGBO(235, 238, 255, 1),
+                  ),
+                  child: InkWell(
+                    child: Align(
+                        alignment: Alignment.center,
 
+                        child:Text('Войти в аккаунт',
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.w600),
+                          ),
+                        )
+                    ),
+                    onTap: () {
+                      print('tapped');
+                    },
+                  ),
 
-          ),
-        ],
-      ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 15.0),
+                  width: 350,
+                  height: 50,
+                  padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
+
+                  child: InkWell(
+                    child: Align(
+                      // alignment: Alignment.center,
+
+                        child:Text('Проблемы со входом в аккаунт?',
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(color: Colors.grey, fontSize: 15, fontWeight: FontWeight.w600),
+                          ),
+                        )
+                    ),
+                    onTap: () {
+                      print('tapped');
+                    },
+                  ),
+
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 65,
+                        height: 40,
+                        child: TextButton(
+                          child: Text(
+                            "Қаз",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600
+                            ),
+                          ),
+                          onPressed: () {  },
+
+                        ),
+                      ),
+                      Container(
+                        width: 1,
+                        height: 20,
+                        color: Colors.black,
+                      ),
+                      Container(
+                        width: 65,
+                        height: 40,
+                        child: TextButton(
+                          child: Text(
+                            "Рус",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600
+                            ),
+                          ),
+                          onPressed: () {  },
+
+                        ),
+                      ),
+                      Container(
+                        width: 1,
+                        height: 20,
+                        color: Colors.black,
+                      ),
+                      Container(
+                        width: 65,
+                        height: 40,
+                        child: TextButton(
+                          child: Text(
+                            "Eng",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w600
+                            ),
+                          ),
+                          onPressed: () {  },
+
+                        ),
+                      )
+                    ]
+                )
+              ],
+            )
+        )
     ); // This trailing comma mak +es auto-formatting nicer for build methods.
   }
 }
