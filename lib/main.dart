@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-        child: Container(
+        child: FractionallySizedBox(
+          widthFactor: 0.9,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -57,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
-                  width: 350,
                   padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
@@ -78,7 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
-                  width: 350,
                   margin: EdgeInsets.only(bottom: 5),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
@@ -103,7 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 15.0),
-                  width: 350,
                   height: 50,
                   padding : const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 12.0),
 
