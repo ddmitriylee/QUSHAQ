@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qushaq/login_page.dart';
 import 'start_page.dart';
+import 'register_first_page.dart';
+import 'register_second_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qushaq/translator.dart';
 import 'package:get/get.dart';
@@ -37,7 +39,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/' : (context) => StartPage(changeLocale:changeLocale),
-        '/login' : (context) => LoginPage()
+        '/login' : (context) => LoginPage(),
+        '/signupstepfirst' : (context) => RegisterFirstPage(),
+        '/signupstepsecond' : (context) => RegisterSecondPage(),
       },
     );
   }

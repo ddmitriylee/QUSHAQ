@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'login_page.dart';
+import 'register_first_page.dart';
 
 class StartPage extends StatefulWidget {
 
@@ -79,7 +80,7 @@ class StartPage extends StatefulWidget {
                           borderRadius: BorderRadius.circular(12.0)
                       )
                   ),
-                  onPressed: () { print("OK"); },
+                  onPressed: () {Navigator.pushNamed(context, '/signupstepfirst');},
                   child: Text('Создать аккаунт'.tr),
                 ),
                 SizedBox(
