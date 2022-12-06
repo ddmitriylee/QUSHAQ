@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
+import 'start_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qushaq/translator.dart';
 import 'package:get/get.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         )
       ),
-      home: LoginPage(changeLocale:changeLocale),
+      home: StartPage(changeLocale:changeLocale),
     );
   }
 }
