@@ -19,7 +19,7 @@ class QushaqAppBar extends StatelessWidget with PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.transparent,
       leading: backButton ?? false ? IconButton(
-          onPressed: () {print('back');},
+          onPressed: () {Navigator.pop(context);},
           icon: const Icon(Icons.arrow_back_rounded,
             color: Color(0xff8F99D6),
             size: 36.0)

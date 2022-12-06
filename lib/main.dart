@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qushaq/login_page.dart';
 import 'start_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qushaq/translator.dart';
@@ -10,8 +11,8 @@ void main() {
       GetMaterialApp(
         home: MyApp(),
         translations: WorldLanguage(), //Language class from world_languages.dart
-        locale: Locale('ru', 'RU'), // translations will be displayed in that locale
-        fallbackLocale: Locale('ru', 'Ru'),
+        locale: Locale('en', 'US'), // translations will be displayed in that locale
+        fallbackLocale: Locale('en', 'US'),
       )
   );
 }
@@ -32,7 +33,12 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         )
       ),
-      home: StartPage(changeLocale:changeLocale),
+      // home: StartPage(changeLocale:changeLocale),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => StartPage(changeLocale:changeLocale),
+        '/login' : (context) => LoginPage()
+      },
     );
   }
 }
