@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'qushaq_app_bar.dart';
 import 'package:get/get.dart';
 
@@ -83,7 +82,7 @@ class _RegisterSecondPageState extends State<RegisterSecondPage> {
                           fontWeight: FontWeight.w600,
                           color: Colors.white,
                         )),
-                        onPressed: () {print('tap');},
+                        onPressed: () => Navigator.pushNamed(context, '/signupstepthird'),
                       )
                     ],
                   )
