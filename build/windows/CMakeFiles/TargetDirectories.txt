@@ -1,0 +1,10 @@
+D:/QUSHAQ/build/windows/CMakeFiles/INSTALL.dir
+D:/QUSHAQ/build/windows/CMakeFiles/ALL_BUILD.dir
+D:/QUSHAQ/build/windows/CMakeFiles/ZERO_CHECK.dir
+D:/QUSHAQ/build/windows/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+D:/QUSHAQ/build/windows/flutter/CMakeFiles/flutter_wrapper_app.dir
+D:/QUSHAQ/build/windows/flutter/CMakeFiles/flutter_assemble.dir
+D:/QUSHAQ/build/windows/flutter/CMakeFiles/INSTALL.dir
+D:/QUSHAQ/build/windows/runner/CMakeFiles/untitled.dir
+D:/QUSHAQ/build/windows/runner/CMakeFiles/INSTALL.dir
+D:/QUSHAQ/build/windows/runner/CMakeFiles/ALL_BUILD.dir

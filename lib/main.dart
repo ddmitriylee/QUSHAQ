@@ -8,16 +8,13 @@ import 'package:qushaq/translator.dart';
 import 'package:get/get.dart';
 import 'register_third_step.dart';
 
-
 void main() {
-  runApp(
-      GetMaterialApp(
-        home: MyApp(),
-        translations: WorldLanguage(), //Language class from world_languages.dart
-        locale: Locale('ru', 'RU'), // translations will be displayed in that locale
-        fallbackLocale: Locale('ru', 'RU'),
-      )
-  );
+  runApp(GetMaterialApp(
+    home: MyApp(),
+    translations: WorldLanguage(), //Language class from world_languages.dart
+    locale: Locale('ru', 'RU'), // translations will be displayed in that locale
+    fallbackLocale: Locale('ru', 'RU'),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,17 +29,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: GoogleFonts.montserratTextTheme(
-          Theme.of(context).textTheme,
-        )
-      ),
+          textTheme: GoogleFonts.notoSansTextTheme(
+        Theme.of(context).textTheme,
+      )),
       initialRoute: '/',
       routes: {
-        '/' : (context) => StartPage(changeLocale:changeLocale),
-        '/login' : (context) => LoginPage(),
-        '/signupstepfirst' : (context) => RegisterFirstPage(),
-        '/signupstepsecond' : (context) => RegisterSecondPage(),
-        '/signupstepthird' : (context) => RegisterThirdStep()
+        '/': (context) => StartPage(changeLocale: changeLocale),
+        '/login': (context) => LoginPage(),
+        '/signupstepfirst': (context) => RegisterFirstPage(),
+        '/signupstepsecond': (context) => RegisterSecondPage(),
+        '/signupstepthird': (context) => RegisterThirdStep()
       },
     );
   }
