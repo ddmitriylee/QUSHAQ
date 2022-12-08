@@ -13,3 +13,5 @@ windows
 analysis_options.yaml
 pubspec.lock
 qushaq.iml
+.DS_store
+README.md
