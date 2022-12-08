@@ -34,16 +34,24 @@ class MyApp extends StatelessWidget {
         Theme.of(context).textTheme,
       )),
       initialRoute: '/',
-      onGenerateRoute: (RouteSettings settings) {
-        dynamic routes = {
-          '/': SlideRightRoute(widget: StartPage(changeLocale: changeLocale)),
-          '/login': SlideRightRoute(widget: LoginPage()),
-          '/signupstepfirst': SlideRightRoute(widget: RegisterFirstPage()),
-          '/signupstepsecond': SlideRightRoute(widget: RegisterSecondPage()),
-          '/signupstepthird': SlideRightRoute(widget: RegisterThirdStep())
-        };
-        return routes[settings.name];
+      routes: {
+        '/': (context) => StartPage(changeLocale: changeLocale),
+        '/login': (context) => LoginPage(),
+        '/signupstepfirst': (context) => RegisterFirstPage(),
+        '/signupstepsecond': (context) => RegisterSecondPage(),
+        '/signupstepthird': (context) => RegisterThirdStep()
       },
+      // onGenerateRoute: (RouteSettings settings) {
+      //   print(settings);
+      //   dynamic routes = {
+      //     '/': SlideRightRoute(widget: StartPage(changeLocale: changeLocale)),
+      //     '/login': SlideRightRoute(widget: LoginPage()),
+      //     '/signupstepfirst': SlideRightRoute(widget: RegisterFirstPage()),
+      //     '/signupstepsecond': SlideRightRoute(widget: RegisterSecondPage()),
+      //     '/signupstepthird': SlideRightRoute(widget: RegisterThirdStep())
+      //   };
+      //   return routes[settings.name];
+      // },
     );
   }
 }

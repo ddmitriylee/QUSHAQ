@@ -90,25 +90,36 @@ class _StartPageState extends State<StartPage> {
                           widget.changeLocale('ru', 'RU');
                         },
                         child: const Text(
-                          'RU',
+                          'Рус',
                           style: TextStyle(color: Colors.black),
                         )),
+                    Container(
+                      width: 1,
+                      height: 20,
+                      color: Colors.black,
+                    ),
                     TextButton(
                         onPressed: () {
                           widget.changeLocale('en', 'US');
                         },
                         child: const Text(
-                          'EN',
+                          'Eng',
                           style: TextStyle(color: Colors.black),
                         )),
+                    Container(
+                      width: 1,
+                      height: 20,
+                      color: Colors.black,
+                    ),
                     TextButton(
-                        onPressed: () {
-                          widget.changeLocale('kz', 'KZ');
-                        },
-                        child: const Text(
-                          'KZ',
-                          style: TextStyle(color: Colors.black),
-                        ))
+                      onPressed: () {
+                        widget.changeLocale('kz', 'KZ');
+                      },
+                      child: const Text(
+                        'Каз',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    )
                   ],
                 )
               ],

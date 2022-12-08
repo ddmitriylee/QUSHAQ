@@ -110,6 +110,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "mask_text_input_formatter",
+      "rootUri": "file:///C:/Users/Redmibook%2016/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/mask_text_input_formatter-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "matcher",
       "rootUri": "file:///C:/Users/Redmibook%2016/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/matcher-0.12.12",
       "packageUri": "lib/",
@@ -266,7 +272,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-06T10:19:11.504711Z",
+  "generated": "2022-12-08T09:35:27.848638Z",
   "generator": "pub",
   "generatorVersion": "2.18.2"
 }
