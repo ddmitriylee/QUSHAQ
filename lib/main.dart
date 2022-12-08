@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qushaq/login_page.dart';
+import 'package:qushaq/slide_widget.dart';
 import 'start_page.dart';
 import 'register_first_page.dart';
 import 'register_second_page.dart';
@@ -33,12 +34,15 @@ class MyApp extends StatelessWidget {
         Theme.of(context).textTheme,
       )),
       initialRoute: '/',
-      routes: {
-        '/': (context) => StartPage(changeLocale: changeLocale),
-        '/login': (context) => LoginPage(),
-        '/signupstepfirst': (context) => RegisterFirstPage(),
-        '/signupstepsecond': (context) => RegisterSecondPage(),
-        '/signupstepthird': (context) => RegisterThirdStep()
+      onGenerateRoute: (RouteSettings settings) {
+        dynamic routes = {
+          '/': SlideRightRoute(widget: StartPage(changeLocale: changeLocale)),
+          '/login': SlideRightRoute(widget: LoginPage()),
+          '/signupstepfirst': SlideRightRoute(widget: RegisterFirstPage()),
+          '/signupstepsecond': SlideRightRoute(widget: RegisterSecondPage()),
+          '/signupstepthird': SlideRightRoute(widget: RegisterThirdStep())
+        };
+        return routes[settings.name];
       },
     );
   }
